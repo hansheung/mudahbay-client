@@ -35,7 +35,7 @@ const DashboardItem = ({ item, refetch }) => {
         e.preventDefault();
         await createMessage(item.user._id, item._id);
         navigate("/chat");
-        window.location.reload();
+        // window.location.reload();
     };
 
     // const avgRating = data.avg;
@@ -74,7 +74,7 @@ const DashboardItem = ({ item, refetch }) => {
                             <p className="text-gray-400 italic">{data?.avg?.toFixed(1) || 0} out of 5</p>
                         </div>
                     </td>
-                    
+
                     <td className="px-6 py-4">
                         <div className="flex space-x-3 ml-auto">
                             <button className="bg-green-300 text-white font-bold rounded-full px-5 py-3 hover:underline" onClick={(e) => handleCreateChat(e)}>

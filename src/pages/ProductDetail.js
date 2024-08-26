@@ -125,7 +125,7 @@ const ProductDetail = ({ token }) => {
         e.preventDefault();
         await createMessage(product.user, product._id);
         navigate("/chat");
-        window.location.reload();
+        // window.location.reload();
     };
 
     return (
