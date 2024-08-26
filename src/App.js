@@ -12,9 +12,9 @@ import Sold from "./pages/Sold";
 import Purchase from "./pages/Purchase";
 import Dashboard from "./pages/Dashboard";
 import Review from "./pages/Review";
-import Selling from "./pages/Selling"
-import User from "./pages/User"
-import Chat from "./pages/Chat"
+import Selling from "./pages/Selling";
+import User from "./pages/User";
+import Chat from "./pages/Chat";
 
 function App() {
     const [token, setToken] = useState(Cookies.get("authToken") || "");
@@ -34,9 +34,9 @@ function App() {
                 <Route path="/orders/sold" element={<Sold />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/reviews/:id" element={<Review />} />
-                <Route path="/selling" element={<Selling token={token}/>} />
+                <Route path="/selling" element={<Selling token={token} />} />
                 <Route path="/user/:id" element={<User />} />
-                <Route path="/chat" element={<Chat token={token} />} />
+                <Route exact path="/chat" element={<Chat token={token} />} />
             </Routes>
         </>
     );
