@@ -1,70 +1,135 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mudahbay Client
 
-## Available Scripts
+Mudahbay Client is the frontend application for the Mudahbay online marketplace platform. This React-based client provides a user-friendly interface for buyers and sellers to interact with the marketplace, manage product listings, and handle transactions.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the App](#running-the-app)
+  - [Building for Production](#building-for-production)
+- [Environment Variables](#environment-variables)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This repository contains the frontend code for Mudahbay, an online marketplace platform. The client is built using React and Tailwind CSS, offering a seamless user experience for managing accounts, browsing products, and handling transactions. The client communicates with the Mudahbay Server via RESTful APIs.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **User Authentication**: Sign up, log in, and manage user accounts.
+- **Product Browsing**: View product listings with search and filter capabilities.
+- **Review System**: Submit and view product and seller reviews.
+- **Responsive Design**: Fully responsive design built with Tailwind CSS.
+- **Interactive UI**: Modern, interactive UI components built with React.
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **React Router**: Library for routing and navigation in React applications.
+- **Context API**: For managing global state in the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get the client running locally, follow these steps:
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Node.js** (v14.x or later)
+- **npm** (v6.x or later)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    git clone https://github.com/hansheung/mudahbay-client.git
+    cd mudahbay-client
+    ```
 
-## Learn More
+2. Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running the App
 
-### Code Splitting
+To run the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+The app will run on `http://localhost:3000` by default.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Building for Production
 
-### Making a Progressive Web App
+To create a production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+The optimized production build will be located in the `build/` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Environment Variables
 
-### Deployment
+The following environment variables are required to run the client:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `REACT_APP_API_URL`: The base URL of the Mudahbay Server API.
+- `REACT_APP_CLOUDINARY_CLOUD_NAME`: Cloudinary cloud name for handling media files.
+- `REACT_APP_CLOUDINARY_UPLOAD_PRESET`: Cloudinary upload preset for media files.
 
-### `npm run build` fails to minify
+Example `.env` file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+REACT_APP_API_URL=https://api.mudahbay.com
+REACT_APP_CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+REACT_APP_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
+```
+
+## Folder Structure
+
+The project directory structure is as follows:
+
+```plaintext
+mudahbay-client/
+├── public/
+├── src/
+│   ├── assets/          # Images, icons, and other assets
+│   ├── components/      # Reusable UI components
+│   ├── contexts/        # Context API providers
+│   ├── pages/           # React components for different pages
+│   ├── services/        # API service functions
+│   ├── styles/          # Global CSS and Tailwind configuration
+│   ├── App.js           # Main app component
+│   ├── index.js         # App entry point
+│   └── ...
+└── ...
+```
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+Please ensure your code follows the project's coding standards and includes tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
