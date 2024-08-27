@@ -30,7 +30,6 @@ const SellingItem = ({ item, refetch }) => {
             }
         });
     };
-    console.log(item);
 
     return (
         <>

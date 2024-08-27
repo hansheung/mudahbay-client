@@ -14,8 +14,6 @@ const Selling = ({token}) => {
     if (isLoading) return <h2 className="text-center animate-pulse text-blue-700 text-lg mt-10">Loading...</h2>;
     if (error) return <h2 className="text-center animate-pulse text-red-700 text-lg mt-10">Error Loading Page...</h2>;
 
-    console.log(data);
-
     return (
         <main className="max-w-6xl mx-auto p-10 border mt-10">
             <h1 className="text-4xl font-bold">Selling</h1>

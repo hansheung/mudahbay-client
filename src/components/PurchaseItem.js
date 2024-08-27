@@ -121,7 +121,7 @@ const PurchaseItem = ({ order }) => {
                         [`${orderId}_${productId}`]: true
                     }));
                     handleCloseModal();
-                    window.location.reload();
+                    // window.location.reload();
                 },
                 onError: (error) => alert(error.response.data.msg),
             }

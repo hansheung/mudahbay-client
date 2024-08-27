@@ -42,7 +42,7 @@ const ProductItem = ({ product, token }) => {
                 <div>
                     <h1 className="text-lg font-bold mb-3">{product.name}</h1>
                     <hr></hr>
-                    <p className="mt-3">{isExpanded || product.description.length <= maxLength ? product.description : `${product.description.slice(0, maxLength)}...`}</p>
+                    <p className="mt-3 break-words">{isExpanded || product.description.length <= maxLength ? product.description : `${product.description.slice(0, maxLength)}...`}</p>
                     {product.description.length > maxLength && (
                         <button onClick={toggleDescription} className="text-blue-500 hover:underline mt-2">
                             {isExpanded ? "See Less" : "See More"}
