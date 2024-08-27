@@ -85,17 +85,13 @@ The optimized production build will be located in the `build/` directory.
 ## Environment Variables
 
 The following environment variables are required to run the client:
-
-- `REACT_APP_API_URL`: The base URL of the Mudahbay Server API.
-- `REACT_APP_CLOUDINARY_CLOUD_NAME`: Cloudinary cloud name for handling media files.
-- `REACT_APP_CLOUDINARY_UPLOAD_PRESET`: Cloudinary upload preset for media files.
-
+```
+REACT_APP_API_URL=http://localhost:yourserverportnumber
+```
 Example `.env` file:
 
 ```plaintext
-REACT_APP_API_URL=https://api.mudahbay.com
-REACT_APP_CLOUDINARY_CLOUD_NAME=your_cloudinary_name
-REACT_APP_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
+REACT_APP_API_URL=http://localhost:8888
 ```
 
 ## Folder Structure
